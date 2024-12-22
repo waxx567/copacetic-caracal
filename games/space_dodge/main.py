@@ -27,6 +27,8 @@ def main():
 
     clock = pygame.time.Clock()
 
+    start_time = time.time()
+
     while run:
         clock.tick(60)
 
