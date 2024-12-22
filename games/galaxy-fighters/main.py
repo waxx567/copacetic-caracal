@@ -1,4 +1,5 @@
 import pygame
+import os
 
 WIDTH, HEIGHT = 800, 500
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -7,6 +8,8 @@ pygame.display.set_caption("Galaxy Fighters")
 WHITE = (255, 255, 255)
 
 FPS = 60
+
+YELLOW_SPACESHIP_IMAGE = pygame.image.load(os.path.join("assets", "spaceship_yellow.png"))
 
 def draw_window():
     WIN.fill(WHITE)
