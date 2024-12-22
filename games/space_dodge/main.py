@@ -20,6 +20,8 @@ FONT = pygame.font.SysFont("comicsans", 30)
 def draw(player, elapsed_time):
     WIN.blit(BG, (0, 0))
 
+    time_label = FONT.render(f"Time: {round(elapsed_time)}s", 1, "white")
+
     pygame.draw.rect(WIN, "red", player)
 
     pygame.display.update()
