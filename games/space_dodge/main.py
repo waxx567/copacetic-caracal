@@ -13,6 +13,9 @@ BG = pygame.transform.scale(pygame.image.load("bg.jpeg"), (WIDTH, HEIGHT))
 PLAYER_WIDTH = 40
 PLAYER_HEIGHT = 60
 
+SHOT_WIDTH = 10
+SHOT_HEIGHT = 20
+
 PLAYER_VEL = 5
 
 FONT = pygame.font.SysFont("comicsans", 30)
@@ -47,7 +50,7 @@ def main():
 
         if shot_counter >= shot_add_increment:
             for _ in range(3):
-                shot_x = random.randint(0, WIDTH - PLAYER_WIDTH)
+                shot_x = random.randint(0, WIDTH - SHOT_WIDTH)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
