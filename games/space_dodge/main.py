@@ -21,13 +21,16 @@ SHOT_VELOCITY = 3
 
 FONT = pygame.font.SysFont("comicsans", 30)
 
-def draw(player, elapsed_time):
+def draw(player, elapsed_time, shots):
     WIN.blit(BG, (0, 0))
 
     time_label = FONT.render(f"Time: {round(elapsed_time)}s", 1, "white")
     WIN.blit(time_label, (10, 10))
 
     pygame.draw.rect(WIN, "red", player)
+
+    for shot in shots:
+        pygame.draw.rect(WIN, "white", shot)
 
     pygame.display.update()
 
@@ -81,7 +84,7 @@ def main():
                 hit = True
                 break
 
-        draw(player, elapsed_time)
+        draw(player, elapsed_time, shots)
 
     pygame.quit()
 
