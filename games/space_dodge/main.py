@@ -45,6 +45,8 @@ def main():
 
     shots = []
 
+    hit = False
+
     while run:
         shot_counter += clock.tick(60)
         elapsed_time = time.time() - start_time
