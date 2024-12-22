@@ -17,7 +17,9 @@ SHOT_WIDTH = 10
 SHOT_HEIGHT = 20
 
 PLAYER_VELOCITY = 5
-SHOT_VELOCITY = 3
+SHOT_VELOCITY
+if shot.y > HEIGHT:
+    shots.remove(shot) = 3
 
 FONT = pygame.font.SysFont("comicsans", 30)
 
@@ -72,6 +74,8 @@ def main():
 
         for shot in shots[:]:
             shot.y += SHOT_VELOCITY
+            if shot.y > HEIGHT:
+                shots.remove(shot)
 
         draw(player, elapsed_time)
 
