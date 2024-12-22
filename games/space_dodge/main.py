@@ -17,10 +17,7 @@ SHOT_WIDTH = 10
 SHOT_HEIGHT = 20
 
 PLAYER_VELOCITY = 5
-SHOT_VELOCITY
-if shot.y > HEIGHT:
-    shots.remove(shot)
-elif shot.y >= player.y and shot.y < player.y + player.height: = 3
+SHOT_VELOCITY = 3
 
 FONT = pygame.font.SysFont("comicsans", 30)
 
