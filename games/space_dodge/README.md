@@ -1,6 +1,6 @@
 # Space Dodge
 
-**Space Dodge** is an arcade-style survival game built using Python and Pygame. The goal is to avoid incoming shots for as long as possible. As the game progresses, the difficulty increases with more frequent projectiles.
+**Space Dodge** is an arcade-style survival game built using `Python` and `Pygame`. The goal is to avoid incoming shots for as long as possible. As the game progresses, the difficulty increases with more frequent projectiles.
 
 ---
 
