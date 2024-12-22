@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block title %}
+    promotor motorcycle haven | KTM Duke{% endblock %} {% block nav %}
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+    </ul>
+  </nav>
+  {% endblock %} {% block content %}
+  <div class="container">
+    <img
+      class="img-fluid"
+      src="../static/img/duke_2.jpg"
+      alt="KTM Duke 790 image"
+    />
+  </div>
+  
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Make and Model</th>
+        <th>KTM 790 Duke</th>
+      </tr>
+      <tr>
+        <th>Year</th>
+        <th>2018</th>
+      </tr>
+      <tr>
+        <th>Engine</th>
+        <th>Four stroke, parallel twin cylinder, DOHC, 4 valves per cylinder</th>
+      </tr>
+      <tr>
+        <th>Capacity</th>
+        <th>799cc / 48.7 cu. in.</th>
+      </tr>
+      <tr>
+        <th>Power</th>
+        <th>78 kW / 105 hp @ 9000 rpm</th>
+      </tr>
+      <tr>
+        <th>Torque</th>
+        <th>87 Nm / 63.4 lb-ft @ 8000 rpm</th>
+      </tr>
+    </tbody>
+  </table>
+  {% endblock %}

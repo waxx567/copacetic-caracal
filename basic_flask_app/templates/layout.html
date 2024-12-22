@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="All things motorcycle" />
+    <meta
+      name="keywords"
+      content="Motorcycles sales, motorcycle repairs, custom motorcycles, race bikes"
+    />
+    <meta name="author" content="Wayne McRae" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+        <section id="header-boxes">
+          <div class="header-container">
+            <div id="header-box_1">
+              <!-- Logo -->
+              <p><a href="/"><img src="../static/img/promotor_medium.jpg" alt="Promotor Logo"></p></a>
+            </div>
+            <div id="header-box_2">
+              <!-- Company name -->
+              <div id="branding">
+                <h1><span class="highlight_1">promotor</span><span class="highlight_3"> motorcycle haven</span></h1>
+              </div>
+            </div>
+            <div id="header-box_3">
+              <!-- Navigation -->
+              {% block nav %}{% endblock %}
+            </div>
+          </div>
+        </section>
+    </header>  
+    {% block content %}{% endblock %}
+    <div class="footer">
+      <footer>
+        <p>
+          <span id="bold"
+            ><span class="highlight_2">promotor</span
+            ><span class="highlight_3"> motorcycle haven</span></span
+          >
+          &copy; 2024
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block title %}
+    promotor motorcycle haven | MV Agusta Brutale{% endblock %} {% block nav %}
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/services">Services</a></li>
+    </ul>
+  </nav>
+  {% endblock %} {% block content %}
+  <div class="container">
+    <img
+      class="img-bike"
+      src="../static/img/brutale_2.jpg"
+      alt="MV Agusta Brutale image"
+    />
+  </div>
+  
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Make and Model</th>
+        <th>MV Agusta Brutale 800RR</th>
+      </tr>
+      <tr>
+        <th>Year</th>
+        <th>2019</th>
+      </tr>
+      <tr>
+        <th>Engine</th>
+        <th>
+          Four stroke, transverse three cylinder, DOHC, 4 valves per cylinder
+        </th>
+      </tr>
+      <tr>
+        <th>Capacity</th>
+        <th>798cc / 48.68 cu. in.</th>
+      </tr>
+      <tr>
+        <th>Power</th>
+        <th>103 kW / 140 hp @ 13100 rpm</th>
+      </tr>
+      <tr>
+        <th>Torque</th>
+        <th>87 Nm / 64.1 lb-ft @ 10100 rpm</th>
+      </tr>
+    </tbody>
+  </table>
+  {% endblock %}

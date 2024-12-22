@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block title %}
+promotor motorcycle haven | Home{% endblock %} 
+{% block nav %}
+<nav>
+  <ul>
+    <li class="current"><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/services">Services</a></li>
+  </ul>
+</nav>
+{% endblock %} {% block content %}
+<section id="showcase">
+  <div class="container">
+    <h1>Unique Motorcycles Available Now</h1>
+    <p>
+      Lorem tellus aliquam, hac volutpat curabitur consequat cubilia. Nullam
+      porttitor aenean, odio quisque.
+    </p>
+  </div>
+</section>
+<!-- ADD A DIV HERE TO ALLOW GLOBAL PROPERTIES FOR SUBMIT BUTTON -->
+<section id="newsletter">
+  <div class="container">
+    <h2>Subscribe To Our Newsletter</h2>
+    <form action="/action_page.php" , onsubmit="myFunction()">
+      <input type="email" placeholder="Enter Email..." />
+      <button type="submit" class="button_1">Subscribe</button>
+    </form>
+  </div>
+</section>
+<!-- END DIV HERE -->
+
+<!-- SAME FOR OTHER PAGES -->
+
+<!-- DON'T FORGET THE SCRIPT TAGS ON EACH PAGE -->
+
+<section id="boxes">
+  <div class="box-container">
+    <div class="box">
+      <a href="/mv"
+        ><img src="../static/img/MV_Agusta_logo.png" alt="MV Agusta Logo"
+      /></a>
+      <h3>Brutale 800RR</h3>
+      <p>
+        Habitant molestie, nec nam ornare. Sagittis hendrerit conubia, enim
+        sociosqu curabitur ornare.
+      </p>
+    </div>
+    <div class="box">
+      <a href="/triumph"
+        ><img src="../static/img/triumph-logo.png" alt="Triumph Logo"
+      /></a>
+      <h3>Street Triple RS</h3>
+      <p>
+        Habitant molestie, nec nam ornare. Sagittis hendrerit conubia, enim
+        sociosqu curabitur ornare.
+      </p>
+    </div>
+    <div class="box">
+      <a href="/ktm"><img src="../static/img/KTM-logo.jpg" alt="KTM Logo" /></a>
+      <h3>790 Duke</h3>
+      <p>
+        Habitant molestie, nec nam ornare. Sagittis hendrerit conubia, enim
+        sociosqu curabitur ornare.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- CONTAINER FOR SCRIPTS? -->
+<script>
+  function myFunction() {
+    alert("The form was submitted");
+  }
+</script>
+{% endblock %}
