@@ -37,7 +37,7 @@ def main():
     elapsed_time = 0
 
     shot_add_increment = 2000
-    shot_count = 0
+    shot_counter = 0
 
     while run:
         clock.tick(60)
