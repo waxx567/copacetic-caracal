@@ -45,6 +45,10 @@ def main():
         shot_counter += clock.tick(60)
         elapsed_time = time.time() - start_time
 
+        if shot_counter >= shot_add_increment:
+            shot_counter = 0
+            shots.append(pygame.Rect(random.randint(0, WIDTH - 10), 0, 10, 10))
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
