@@ -1,7 +1,7 @@
 import pygame
 import os
 
-WIDTH, HEIGHT = 800, 500
+WIDTH, HEIGHT = 800, 400
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Galaxy Fighters")
 
@@ -14,6 +14,7 @@ RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join("assets", "spaceship_red.pn
 
 def draw_window():
     WIN.fill(WHITE)
+    WIN.blit(YELLOW_SPACESHIP_IMAGE, (300, 100))
     pygame.display.update()
 
 def main():
