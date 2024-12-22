@@ -13,7 +13,7 @@ PLAYER_HEIGHT = 60
 
 PLAYER_VEL = 5
 
-def draw(player):
+def draw(player, elapsed_time):
     WIN.blit(BG, (0, 0))
 
     pygame.draw.rect(WIN, "red", player)
@@ -45,7 +45,7 @@ def main():
         if keys[pygame.K_RIGHT] and player.x + PLAYER_VEL + player.width <= WIDTH:
             player.x += PLAYER_VEL
 
-        draw(player)
+        draw(player, elapsed_time)
 
     pygame.quit()
 
