@@ -77,7 +77,7 @@ def main():
             shot.y += SHOT_VELOCITY
             if shot.y > HEIGHT:
                 shots.remove(shot)
-            elif shot.y >= player.y and shot.colliderect(player):
+            elif shot.y + shot.height >= player.y and shot.colliderect(player):
                 shots.remove(shot)
                 hit = True
                 break
