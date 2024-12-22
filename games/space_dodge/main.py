@@ -46,8 +46,8 @@ def main():
         elapsed_time = time.time() - start_time
 
         if shot_counter >= shot_add_increment:
-            shot_counter = 0
-            shots.append(pygame.Rect(random.randint(0, WIDTH - 10), 0, 10, 10))
+            for _ in range(3):
+                shot_x = random.randint(0, WIDTH - PLAYER_WIDTH)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
