@@ -42,7 +42,7 @@ def main():
     shots = []
 
     while run:
-        clock.tick(60)
+        shot_counter += clock.tick(60)
         elapsed_time = time.time() - start_time
 
         for event in pygame.event.get():
