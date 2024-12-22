@@ -51,7 +51,7 @@ def main():
         if shot_counter >= shot_add_increment:
             for _ in range(3):
                 shot_x = random.randint(0, WIDTH - SHOT_WIDTH)
-                shot = pygame.Rect(shot_x, - SHOT_HEIGHT)
+                shot = pygame.Rect(shot_x, -SHOT_HEIGHT, SHOT_WIDTH, SHOT_HEIGHT)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
