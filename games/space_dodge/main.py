@@ -16,7 +16,8 @@ PLAYER_HEIGHT = 60
 SHOT_WIDTH = 10
 SHOT_HEIGHT = 20
 
-PLAYER_VEL = 5
+PLAYER_VELOCITY = 5
+SHOT_VELOCITY = 3
 
 FONT = pygame.font.SysFont("comicsans", 30)
 
@@ -64,18 +65,13 @@ def main():
 
         keys = pygame.key.get_pressed()
 
-        if keys[pygame.K_LEFT] and player.x - PLAYER_VEL >= 0:
-            player.x -= PLAYER_VEL
-        if keys[pygame.K_RIGHT] and player.x + PLAYER_VEL + player.width <= WIDTH:
-            player.x += PLAYER_VEL
+        if keys[pygame.K_LEFT] and player.x - PLAYER_VELOCITY >= 0:
+            player.x -= PLAYER_VELOCITY
+        if keys[pygame.K_RIGHT] and player.x + PLAYER_VELOCITY + player.width <= WIDTH:
+            player.x += PLAYER_VELOCITY
 
-        for shot in shots:
-            shot.y += 5
-            if shot.colliderect(player):
-                run = False
-                break
-            if shot.y > HEIGHT:
-                shots.remove(shot)
+        for shot in shots[:]:
+            shot.y += SHOT_VELOCITY
 
         draw(player, elapsed_time)
 
