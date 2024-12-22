@@ -69,6 +69,14 @@ def main():
         if keys[pygame.K_RIGHT] and player.x + PLAYER_VEL + player.width <= WIDTH:
             player.x += PLAYER_VEL
 
+        for shot in shots:
+            shot.y += 5
+            if shot.colliderect(player):
+                run = False
+                break
+            if shot.y > HEIGHT:
+                shots.remove(shot)
+
         draw(player, elapsed_time)
 
     pygame.quit()
