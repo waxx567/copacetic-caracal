@@ -87,6 +87,9 @@ def main():
         if hit:
             lost_label = FONT.render("You lost!", 1, "white")
             WIN.blit(lost_label, (WIDTH / 2 - lost_label.get_width() / 2, HEIGHT / 2 - lost_label.get_height() / 2))
+            pygame.display.update()
+            pygame.time.delay(4000)
+            break
         
         draw(player, elapsed_time, shots)
 
