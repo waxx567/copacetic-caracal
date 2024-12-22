@@ -15,6 +15,8 @@ PLAYER_HEIGHT = 60
 
 PLAYER_VEL = 5
 
+FONT = pygame.font.SysFont("comicsans", 30)
+
 def draw(player, elapsed_time):
     WIN.blit(BG, (0, 0))
 
