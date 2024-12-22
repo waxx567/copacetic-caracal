@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Ducati{% endblock %} {% block bodyclass %}
+<body class="bikes">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--bikes flow">
+    <h1 class="numbered-title backdrop-blur">
+      <span aria-hidden="true">01</span> Choose your motorcycle
+    </h1>
+
+    <img
+      src="./static/images/ducati_streetfighter.jpg"
+      alt="ducati streetfighter"
+    />
+
+    <div class="tab-list underline-indicators flex backdrop-blur">
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/triumph">765RS</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/ktm">Duke</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/mvagusta">Dragster</a>
+      </button>
+      <button
+        aria-selected="true"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a class="text-white" href="/ducati">Fighter</a>
+      </button>
+    </div>
+
+    <article class="bikes-info backdrop-blur flow">
+      <h2 class="fs-800 uppercase ff-serif">Ducati</h2>
+
+      <p>
+        The Ducati Streetfighter V4 S features a balance of distinctive lines,
+        brutal output, a multitude of engineering and technological aspects and
+        state-of-the-art ingenuity which make this the ultimate dream machine.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 12750rpm</h3>
+          <p class="ff-serif uppercase">208hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 11000rpm</h3>
+          <p class="ff-serif uppercase">123Nm</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+{% endblock %}

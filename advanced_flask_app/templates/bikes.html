@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Bikes{% endblock %} {% block bodyclass %}
+<body class="bikes">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--bikes flow">
+    <h1 class="numbered-title backdrop-blur">
+      <span aria-hidden="true">01</span> Choose your motorcycle
+    </h1>
+
+    <!-- Triumph Street Triple 765RS image -->
+    <picture id="triumph-image">
+      <img
+        src="./static/images/triumph_street_triple.jpg"
+        alt="triumph street triple"
+      />
+    </picture>
+
+    <!-- KTM 890 Duke R image -->
+    <picture hidden id="ktm-image">
+      <img src="./static/images/ktm_890_duke_r.jpg" alt="ktm duke" />
+    </picture>
+
+    <!-- MV Agusta Dragster RR image -->
+    <picture hidden id="mv-image">
+      <img src="./static/images/mv_dragster_r.jpg" alt="mv agusta dragster" />
+    </picture>
+
+    <!-- Ducati Streetfighter V4 S image -->
+    <picture hidden id="ducati-image">
+      <img
+        src="./static/images/ducati_streetfighter.jpg"
+        alt="ducati streetfighter"
+      />
+    </picture>
+
+    <div
+      class="tab-list underline-indicators flex backdrop-blur"
+      role="tablist"
+      aria-label="bikes list"
+    >
+      <!-- Triumph tab -->
+      <button
+        aria-selected="true"
+        role="tab"
+        aria-controls="triumph-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+        tabindex="0"
+        data-image="triumph-image"
+      >
+        765RS
+      </button>
+      <!-- KTM tab -->
+      <button
+        aria-selected="false"
+        role="tab"
+        aria-controls="ktm-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+        tabindex="-1"
+        data-image="ktm-image"
+      >
+        Duke
+      </button>
+      <!-- MV Agusta tab -->
+      <button
+        aria-selected="false"
+        role="tab"
+        aria-controls="mv-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+        tabindex="-1"
+        data-image="mv-image"
+      >
+        Dragster
+      </button>
+      <!-- Ducati tab -->
+      <button
+        aria-selected="false"
+        role="tab"
+        aria-controls="ducati-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+        tabindex="-1"
+        data-image="ducati-image"
+      >
+        Fighter
+      </button>
+    </div>
+
+    <!-- Triumph content -->
+    <article
+      class="bikes-info backdrop-blur flow"
+      id="triumph-tab"
+      tabindex="0"
+      role="tabpanel"
+    >
+      <h2 class="fs-800 uppercase ff-serif">Triumph</h2>
+
+      <p>
+        Featuring a road version of the race engine used by all Moto2 teams, the
+        most powerful and poised Triumph Street Triple 765RS ever is the
+        definitive naked sports machine. The closest you can get to a race bike
+        for the road.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 12000rpm</h3>
+          <p class="ff-serif uppercase">128.2hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 9500rpm</h3>
+          <p class="ff-serif uppercase">80Nm</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- KTM content -->
+    <article
+      hidden
+      class="bikes-info backdrop-blur flow"
+      id="ktm-tab"
+      tabindex="0"
+      role="tabpanel"
+    >
+      <h2 class="fs-800 uppercase ff-serif">KTM</h2>
+
+      <p>
+        The KTM 890 Duke R, dubbed the Super Scalpel, has proven itself to be
+        the undisputed champion in the middleweight segment as it represents as
+        a serious option for race-centric riders looking for agility, punch, and
+        poise.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 9250rpm</h3>
+          <p class="ff-serif uppercase">121hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 7750rpm</h3>
+          <p class="ff-serif uppercase">99Nm</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- MV Agusta content -->
+    <article
+      hidden
+      class="bikes-info backdrop-blur flow"
+      id="mv-tab"
+      tabindex="0"
+      role="tabpanel"
+    >
+      <h2 class="fs-800 uppercase ff-serif">MV Agusta</h2>
+
+      <p>
+        With the looks of a street fighter, reflecting the powerful three-piston
+        heart, the MV Agusta Dragster RR is a raw blend of technology, design
+        and emotions. No other motorcycle better embodies this concept and the
+        vision inspiring it.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 12300rpm</h3>
+          <p class="ff-serif uppercase">140hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 10250rpm</h3>
+          <p class="ff-serif uppercase">87Nm</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Ducati content -->
+    <article
+      hidden
+      class="bikes-info backdrop-blur flow"
+      id="ducati-tab"
+      tabindex="0"
+      role="tabpanel"
+    >
+      <h2 class="fs-800 uppercase ff-serif">Ducati</h2>
+
+      <p>
+        The Ducati Streetfighter V4 S features a balance of distinctive lines,
+        brutal output, a multitude of engineering and technological aspects and
+        state-of-the-art ingenuity which make this the ultimate dream machine.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 12750rpm</h3>
+          <p class="ff-serif uppercase">208hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 11000rpm</h3>
+          <p class="ff-serif uppercase">123Nm</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+{% endblock %}

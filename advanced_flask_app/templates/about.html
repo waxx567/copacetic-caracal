@@ -1,0 +1,201 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}About us{% endblock %} {% block bodyclass %}
+<body class="about">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--about flow">
+    <!-- Text -->
+    <h1 class="numbered-title backdrop-blur">
+      <span aria-hidden="true">02</span> About us
+    </h1>
+
+    <div class="dot-indicators flex" role="tablist" aria-label="staff list">
+      <!-- Dealer principal button -->
+      <button
+        aria-selected="true"
+        aria-controls="dealer-tab"
+        role="tab"
+        data-image="dealer-image"
+        tabindex="0"
+      >
+        <span class="sr-only">Dealer principal</span>
+      </button>
+      <!-- Sales manager button -->
+      <button
+        aria-selected="false"
+        aria-controls="sales-tab"
+        role="tab"
+        data-image="sales-image"
+        tabindex="-1"
+      >
+        <span class="sr-only">Sales manager</span>
+      </button>
+      <!-- Finance manager button -->
+      <button
+        aria-selected="false"
+        aria-controls="finance-tab"
+        role="tab"
+        data-image="finance-image"
+        tabindex="-1"
+      >
+        <span class="sr-only">Finance manager</span>
+      </button>
+      <!-- Workshop manager button -->
+      <button
+        aria-selected="false"
+        aria-controls="workshop-tab"
+        role="tab"
+        data-image="workshop-image"
+        tabindex="-1"
+      >
+        <span class="sr-only">Workshop manager</span>
+      </button>
+    </div>
+
+    <!-- Dealer pricipal content -->
+    <article
+      class="about-details backdrop-blur flow"
+      id="dealer-tab"
+      role="tabpanel"
+      tabindex="0"
+    >
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Dealer principal</h2>
+        <p class="fs-700 uppercase ff-serif">Mark Shuttleworthy</p>
+      </header>
+      <p>
+        Mark Richard Shuttleworthy is the founder and CEO of MOTORCYCLE. He
+        launched the franchise a decade ago and turned it into the premium go-to
+        dealership group for the cognoscenti.
+      </p>
+    </article>
+
+    <!-- Sales manager content -->
+    <article
+      hidden
+      class="about-details backdrop-blur flow"
+      id="sales-tab"
+      role="tabpanel"
+      tabindex="-1"
+    >
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Sales manager</h2>
+        <p class="fs-700 uppercase ff-serif">Anousheh Ansaria</p>
+      </header>
+      <p>
+        Anousheh Ansaria is a sales force powerhouse and co-founder of Protea
+        Systems. She is the friendly face of MOTORCYCLE, and is always on the
+        lookout for the finest options for our clients.
+      </p>
+    </article>
+
+    <!-- Finance manager content -->
+    <article
+      hidden
+      class="about-details backdrop-blur flow"
+      id="finance-tab"
+      role="tabpanel"
+      tabindex="-1"
+    >
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Sales manager</h2>
+        <p class="fs-700 uppercase ff-serif">Victor Glovers</p>
+      </header>
+      <p>
+        Victor Glovers has a Master's degree in accounting from Harvard and
+        brings the highest credentials to the financial aspect of MOTORCYCLE. He
+        takes the task of securing the best financial packages for your clients
+        very seriously.
+      </p>
+    </article>
+
+    <!-- Workshop manager content -->
+    <article
+      hidden
+      class="about-details backdrop-blur flow"
+      id="workshop-tab"
+      role="tabpanel"
+      tabindex="-1"
+    >
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Workshop manager</h2>
+        <p class="fs-700 uppercase ff-serif">Douglas Hurleyn</p>
+      </header>
+      <p>
+        Douglas Gerald Hurleyn is an engineer, former pilot and former NASA
+        astronaut. He brings strong technical and organizational skills to our
+        professional and friendly MOTORCYCLE family.
+      </p>
+    </article>
+
+    <!-- Dealer principal image -->
+    <picture id="dealer-image">
+      <img
+        src="./static/images/image-mark-shuttleworth.png"
+        alt="Mark Shuttleworthy"
+      />
+    </picture>
+
+    <!-- Sales manager image -->
+    <picture hidden id="sales-image">
+      <img
+        src="./static/images/image-anousheh-ansari.png"
+        alt="Anousheh Ansaria"
+      />
+    </picture>
+
+    <!-- Finance manager image -->
+    <picture hidden id="finance-image">
+      <img src="./static/images/image-victor-glover.png" alt="Victor Glovers" />
+    </picture>
+
+    <!-- Workshop manager image -->
+    <picture hidden id="workshop-image">
+      <img
+        src="./static/images/image-douglas-hurley.png"
+        alt="Douglas Hurleyn"
+      />
+    </picture>
+  </main>
+</body>
+{% endblock %}

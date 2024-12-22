@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Apology{% endblock %} {% block bodyclass %}
+<body class="apology">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--home">
+    <!-- Apology -->
+    <div>
+      <!-- https://memegen.link/ -->
+      <img
+        alt="{{ top }}"
+        class="border img-fluid"
+        src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png&width=400"
+        title="{{ top }}"
+      />
+    </div>
+
+    <!-- Blog button -->
+    <div>
+      <a
+        class="large-button uppercase ff-serif text-dark bg-white"
+        href="/regilog"
+        >Go back</a
+      >
+    </div>
+  </main>
+</body>
+{% endblock %}

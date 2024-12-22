@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Blog{% endblock %} {% block bodyclass %}
+<body class="contact">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--home">
+    <div class="flow">
+      <h1 class="text-accent fs-600 ff-sans-cond uppercase letter-spacing-1">
+        Hi {{ name}}
+      </h1>
+      <h2 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+        Blog posts
+      </h2>
+      <form action="/blog_select" method="post">
+        <table class="table table-striped fs-400 text-accent backdrop-blur">
+          <thead class="thead-light">
+            <tr>
+              <th style="display: none">ID</th>
+              <th>Date/Time</th>
+              <th>Title</th>
+              <th>User</th>
+              <th>Replies</th>
+              <th>Likes</th>
+              <th>Go to</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for blog in blogs %}
+            <tr class="ff-sans-cond">
+              <td id="input" style="display: none">{{ blog.id }}</td>
+              <td>{{ blog.timestamp }}</td>
+              <td>{{ blog.blog_title }}</td>
+              <td>{{ blog.blog_user }}</td>
+              <td>{{ blog.replies }}</td>
+              <td>{{ blog.likes }}</td>
+              <td>
+                <button
+                  class="uppercase ff-serif text-dark bg-white"
+                  onclick="sendData()"
+                >
+                  Select
+                </button>
+              </td>
+              <div id="output"></div>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+    <div>
+      <a
+        class="large-button uppercase ff-serif text-dark bg-white"
+        href="/blog_post"
+        >Create post</a
+      >
+    </div>
+  </main>
+  <script>
+    function sendData() {
+      var value = document.getElementById("input").innerText;
+      $.ajax({
+        url: "/blog_select",
+        type: "POST",
+        data: { data: value },
+        success: function (response) {
+          document.getElementById("output").innerHTML = response;
+        },
+        error: function (error) {
+          console.log(error);
+        },
+      });
+    }
+  </script>
+</body>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Blog Post{% endblock %} {% block bodyclass %}
+<body class="home">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--home">
+    <!-- Contact form and newsletter -->
+    <div class="backdrop-blur flow">
+      <!-- Contact form -->
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+        Say something {{ blog_user }}
+      </h1>
+      <form action="/blog_post" class="flow" method="POST">
+        <div>
+          <label>Title</label><br />
+          <input type="text" placeholder="Post title" name="blog-title" />
+        </div>
+        <div>
+          <label>Post</label><br />
+          <textarea
+            placeholder="Write your blog post here"
+            name="content"
+          ></textarea>
+        </div>
+        <button type="submit" class="uppercase ff-serif text-dark bg-white">
+          Submit post
+        </button>
+      </form>
+    </div>
+
+    <!-- Log out button -->
+    <div>
+      <a
+        class="large-button uppercase ff-serif text-dark bg-white"
+        href="/logout"
+        >Log out</a
+      >
+    </div>
+  </main>
+</body>
+{% endblock %}

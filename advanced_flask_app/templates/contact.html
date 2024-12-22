@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Contact{% endblock %} {% block bodyclass %}
+<body class="contact">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--home">
+    <!-- Contact form and newsletter -->
+    <div class="backdrop-blur flow">
+      <!-- Contact form -->
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+        Contact us
+      </h1>
+      <form action="/contact_form" class="quote flow" method="POST">
+        <div>
+          <label>Name</label><br />
+          <input type="text" placeholder="Name" name="contact-name" />
+        </div>
+        <div>
+          <label>Email</label><br />
+          <input type="email" placeholder="Email" name="contact-email" />
+        </div>
+        <div>
+          <label>Message</label><br />
+          <textarea
+            placeholder="Make an enquiry or just say 'Hi'"
+            name="contact-message"
+          ></textarea>
+        </div>
+        <button type="submit" class="uppercase ff-serif text-dark bg-white">
+          Send
+        </button>
+      </form>
+
+      <!-- Newsletter -->
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+        Or subscribe to our newsletter
+      </h1>
+      <form action="/newsletter" class="flow" method="POST">
+        <input
+          id="email"
+          placeholder="Enter email address here"
+          type="email"
+          name="newsletter-email"
+        />
+        <button type="submit" class="uppercase ff-serif text-dark bg-white">
+          Subscribe
+        </button>
+      </form>
+    </div>
+
+    <!-- Blog button -->
+    <div>
+      <a class="large-button uppercase ff-serif text-dark bg-white" href="/blog"
+        >Go to blog</a
+      >
+    </div>
+  </main>
+</body>
+{% endblock %}

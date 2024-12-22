@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="All things motorcycle" />
+    <meta
+      name="keywords"
+      content="Motorcycles sales, motorcycle repairs, custom motorcycles, race bikes"
+    />
+    <meta name="author" content="Wayne McRae" />
+
+    <link
+      rel="icon"
+      type="image/svg"
+      sizes="32x32"
+      href="./static/images/favicon-32x32.svg"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./static/css/styles.css" />
+
+    <title>{% block title %}{% endblock %} | MOTORCYCLE</title>
+
+    <!-- JavaScript -->
+    <script src="./static/js/index.js" defer></script>
+  </head>
+  {% block bodyclass %}{% endblock %}
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <!-- ::before pseudo-element (the thin line on large screens) is here -->
+    <!-- Logo -->
+    <div>
+      <img
+        src="./static/images/motorcycle.jpg"
+        alt="motorcycle logo"
+        class="logo"
+      />
+    </div>
+    <button type="button" class="mobile-nav-toggle">
+      <span class="sr-only">Menu</span>
+    </button>
+    {% block nav %} {% endblock %}
+  </header>
+
+  {% block content %} {% endblock %}
+</html>

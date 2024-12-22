@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Triumph{% endblock %} {% block bodyclass %}
+<body class="bikes">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--bikes flow">
+    <h1 class="numbered-title backdrop-blur">
+      <span aria-hidden="true">01</span> Choose your motorcycle
+    </h1>
+
+    <img
+      src="./static/images/triumph_street_triple.jpg"
+      alt="triumph street triple"
+    />
+    <div class="tab-list underline-indicators flex backdrop-blur">
+      <button
+        aria-selected="true"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a class="text-white" href="/triumph">765RS</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/ktm">Duke</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/mvagusta">Dragster</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/ducati">Fighter</a>
+      </button>
+    </div>
+
+    <article class="bikes-info backdrop-blur flow">
+      <h2 class="fs-800 uppercase ff-serif">Triumph</h2>
+
+      <p>
+        Featuring a road version of the race engine used by all Moto2 teams, the
+        most powerful and poised Triumph Street Triple 765RS ever is the
+        definitive naked sports machine. The closest you can get to a race bike
+        for the road.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 12000rpm</h3>
+          <p class="ff-serif uppercase">128.2hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 9500rpm</h3>
+          <p class="ff-serif uppercase">80Nm</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+{% endblock %}

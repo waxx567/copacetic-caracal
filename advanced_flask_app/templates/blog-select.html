@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}Blog Post{% endblock %} {% block bodyclass %}
+<body class="home">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="">
+    <!-- Contact form and newsletter -->
+    <div class="backdrop-blur flow">
+      <!-- Contact form -->
+      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
+        Hey {{ blog_user }}
+      </h1>
+      <form action="/blog_post" class="flow" method="POST">
+        <h2>This is the post you selected</h2>
+        {% for field in fields %}
+        <p>Time/Date: {{ field.timestamp }}</p>
+        <p>Title: {{ field.blog_title }}</p>
+        <p>Posted by: {{ field.blog_user }}</p>
+        <p>Post: {{ field.content }}</p>
+        <button type="submit">Like</button>
+        <button type="submit">Reply</button>
+        {% endfor %}
+      </form>
+    </div>
+  </main>
+</body>
+{% endblock %}

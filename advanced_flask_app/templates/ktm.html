@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+<!-- Title -->
+{% block title %}KTM{% endblock %} {% block bodyclass %}
+<body class="bikes">
+  {% endblock %}
+  <!-- Navbar -->
+  {% block nav %}
+  <nav>
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation underline-indicators flex"
+    >
+      <li>
+        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="/"
+          ><span aria-hidden="true">00</span>Home</a
+        >
+      </li>
+      <li class="active">
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/bikes"
+          ><span aria-hidden="true">01</span>Bikes</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/about"
+          ><span aria-hidden="true">02</span>About</a
+        >
+      </li>
+      <li>
+        <a
+          class="ff-sans-cond uppercase text-white letter-spacing-2"
+          href="/contact"
+          ><span aria-hidden="true">03</span>Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
+  {% endblock %}
+  <!-- Body -->
+  {% block content %}
+  <!-- Container -->
+  <main id="main" class="grid-container grid-container--bikes flow">
+    <h1 class="numbered-title backdrop-blur">
+      <span aria-hidden="true">01</span> Choose your motorcycle
+    </h1>
+
+    <img src="./static/images/ktm_890_duke_r.jpg" alt="ktm duke" />
+    <div class="tab-list underline-indicators flex backdrop-blur">
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/triumph">765RS</a>
+      </button>
+      <button
+        aria-selected="true"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a class="text-white" href="/ktm">Duke</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/mvagusta">Dragster</a>
+      </button>
+      <button
+        aria-selected="false"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2"
+      >
+        <a href="/ducati">Fighter</a>
+      </button>
+    </div>
+
+    <article class="bikes-info backdrop-blur flow">
+      <h2 class="fs-800 uppercase ff-serif">KTM</h2>
+
+      <p>
+        The KTM 890 Duke R, dubbed the Super Scalpel, has proven itself to be
+        the undisputed champion in the middleweight segment as it represents as
+        a serious option for race-centric riders looking for agility, punch, and
+        poise.
+      </p>
+
+      <div class="bikes-meta flex backdrop-blur">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. power @ 9250rpm</h3>
+          <p class="ff-serif uppercase">121hp</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Max. torque @ 7750rpm</h3>
+          <p class="ff-serif uppercase">99Nm</p>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+{% endblock %}
