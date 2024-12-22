@@ -26,8 +26,8 @@ def main():
     player = pygame.Rect(200, HEIGHT - PLAYER_HEIGHT, PLAYER_WIDTH, PLAYER_HEIGHT)
 
     clock = pygame.time.Clock()
-
     start_time = time.time()
+    elapsed_time = 0
 
     while run:
         clock.tick(60)
