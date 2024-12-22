@@ -6,6 +6,10 @@ pygame.display.set_caption("Galaxy Fighters")
 
 WHITE = (255, 255, 255)
 
+def draw_window():
+    WIN.fill(WHITE)
+    pygame.display.update()
+
 def main():
     run = True
     
@@ -14,8 +18,7 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
-        WIN.fill(WHITE)
-        pygame.display.update()
+        draw_window()
 
     pygame.quit()
 
