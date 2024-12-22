@@ -6,6 +6,8 @@ pygame.display.set_caption("Galaxy Fighters")
 
 WHITE = (255, 255, 255)
 
+FPS = 60
+
 def draw_window():
     WIN.fill(WHITE)
     pygame.display.update()
