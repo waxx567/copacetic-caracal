@@ -39,7 +39,7 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
-        draw_window()
+        draw_window(yellow, red)
 
     pygame.quit()
 
