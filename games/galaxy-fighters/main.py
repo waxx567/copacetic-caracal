@@ -42,20 +42,20 @@ def main():
         keys_pressed = pygame.key.get_pressed()
         if keys_pressed[pygame.K_LEFT]:
             red.x -= VELOCITY
-        # if keys_pressed[pygame.K_RIGHT]:
-        #     red.x += VELOCITY
-        # if keys_pressed[pygame.K_UP]:
-        #     red.y -= VELOCITY
-        # if keys_pressed[pygame.K_DOWN]:
-        #     red.y += VELOCITY
-        # if keys_pressed[pygame.K_a]:
-        #     yellow.x -= VELOCITY
-        # if keys_pressed[pygame.K_d]:
-        #     yellow.x += VELOCITY
-        # if keys_pressed[pygame.K_w]:
-        #     yellow.y -= VELOCITY
-        # if keys_pressed[pygame.K_s]:
-        #     yellow.y += VELOCITY
+        if keys_pressed[pygame.K_RIGHT]:
+            red.x += VELOCITY
+        if keys_pressed[pygame.K_UP]:
+            red.y -= VELOCITY
+        if keys_pressed[pygame.K_DOWN]:
+            red.y += VELOCITY
+        if keys_pressed[pygame.K_a]:
+            yellow.x -= VELOCITY
+        if keys_pressed[pygame.K_d]:
+            yellow.x += VELOCITY
+        if keys_pressed[pygame.K_w]:
+            yellow.y -= VELOCITY
+        if keys_pressed[pygame.K_s]:
+            yellow.y += VELOCITY
 
         draw_window(red, yellow)
 
