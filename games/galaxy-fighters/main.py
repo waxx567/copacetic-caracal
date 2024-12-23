@@ -20,15 +20,15 @@ RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
     RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 270)
 
 
-def draw_window(yellow, red):
+def draw_window(red, yellow):
     WIN.fill(WHITE)
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
     WIN.blit(RED_SPACESHIP, (red.x, red.y))
     pygame.display.update()
 
 def main():
-    yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     red = pygame.Rect(700, 100, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
+    yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
 
     clock = pygame.time.Clock()
     run = True
@@ -40,7 +40,7 @@ def main():
                 run = False
 
         red.x += 1
-        draw_window(yellow, red)
+        draw_window(red, yellow)
 
     pygame.quit()
 
