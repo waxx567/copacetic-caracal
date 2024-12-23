@@ -38,6 +38,24 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
+        keys_pressed = pygame.key.get_pressed()
+        if keys_pressed[pygame.K_LEFT]:
+            red.x -= 10
+        if keys_pressed[pygame.K_RIGHT]:
+            red.x += 10
+        if keys_pressed[pygame.K_UP]:
+            red.y -= 10
+        if keys_pressed[pygame.K_DOWN]:
+            red.y += 10
+        if keys_pressed[pygame.K_a]:
+            yellow.x -= 10
+        if keys_pressed[pygame.K_d]:
+            yellow.x += 10
+        if keys_pressed[pygame.K_w]:
+            yellow.y -= 10
+        if keys_pressed[pygame.K_s]:
+            yellow.y += 10
+            
         draw_window(red, yellow)
 
     pygame.quit()
