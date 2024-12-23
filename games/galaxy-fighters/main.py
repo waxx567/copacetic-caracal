@@ -23,6 +23,7 @@ RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
 def draw_window():
     WIN.fill(WHITE)
     WIN.blit(YELLOW_SPACESHIP, (300, 100))
+    WIN.blit(RED_SPACESHIP, (700, 100))
     pygame.display.update()
 
 def main():
