@@ -57,7 +57,7 @@ def main():
 
     red_bullets = []
     yellow_bullets = []
-    
+
     clock = pygame.time.Clock()
     run = True
     
@@ -69,7 +69,7 @@ def main():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LCTRL:
-                    pass
+                    yellow_bullets.append()
 
         keys_pressed = pygame.key.get_pressed()
         red_handle_movement(keys_pressed, red)
