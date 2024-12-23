@@ -64,6 +64,10 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LCTRL:
+                    pass
+
         keys_pressed = pygame.key.get_pressed()
         red_handle_movement(keys_pressed, red)
         yellow_handle_movement(keys_pressed, yellow)
