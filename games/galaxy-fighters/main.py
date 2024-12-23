@@ -31,23 +31,23 @@ def draw_window(red, yellow):
     pygame.display.update()
 
 def red_handle_movement(keys_pressed, red):
-    if keys_pressed[pygame.K_LEFT]:
+    if keys_pressed[pygame.K_LEFT] and red.x - VELOCITY > 0:
         red.x -= VELOCITY
-    if keys_pressed[pygame.K_RIGHT]:
+    if keys_pressed[pygame.K_RIGHT] and red.x + VELOCITY + red.width < BORDER.x:
         red.x += VELOCITY
-    if keys_pressed[pygame.K_UP]:
+    if keys_pressed[pygame.K_UP] and red.y - VELOCITY > 0:
         red.y -= VELOCITY
-    if keys_pressed[pygame.K_DOWN]:
+    if keys_pressed[pygame.K_DOWN] and red.y + VELOCITY + red.height < HEIGHT - 15:
         red.y += VELOCITY
 
 def yellow_handle_movement(keys_pressed, yellow):
-    if keys_pressed[pygame.K_a]:
+    if keys_pressed[pygame.K_a] and yellow.x - VELOCITY > BORDER.x + BORDER.width:
         yellow.x -= VELOCITY
-    if keys_pressed[pygame.K_d]:
+    if keys_pressed[pygame.K_d] and yellow.x + VELOCITY + yellow.width < WIDTH:
         yellow.x += VELOCITY
-    if keys_pressed[pygame.K_w]:
+    if keys_pressed[pygame.K_w] and yellow.y - VELOCITY > 0:
         yellow.y -= VELOCITY
-    if keys_pressed[pygame.K_s]:
+    if keys_pressed[pygame.K_s] and yellow.y + VELOCITY + yellow.height < HEIGHT - 15:
         yellow.y += VELOCITY
 
 def main():
