@@ -27,7 +27,7 @@ def draw_window(red, yellow):
     pygame.display.update()
 
 def main():
-    red = pygame.Rect(700, 100, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
+    red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
 
     clock = pygame.time.Clock()
