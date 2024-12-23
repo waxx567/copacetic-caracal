@@ -8,6 +8,7 @@ pygame.display.set_caption("Galaxy Fighters")
 WHITE = (255, 255, 255)
 
 FPS = 60
+VELOCITY = 5
 
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
 
@@ -40,22 +41,22 @@ def main():
 
         keys_pressed = pygame.key.get_pressed()
         if keys_pressed[pygame.K_LEFT]:
-            red.x -= 10
+            red.x -= VELOCITY
         if keys_pressed[pygame.K_RIGHT]:
-            red.x += 10
+            red.x += VELOCITY
         if keys_pressed[pygame.K_UP]:
-            red.y -= 10
+            red.y -= VELOCITY
         if keys_pressed[pygame.K_DOWN]:
-            red.y += 10
+            red.y += VELOCITY
         if keys_pressed[pygame.K_a]:
-            yellow.x -= 10
+            yellow.x -= VELOCITY
         if keys_pressed[pygame.K_d]:
-            yellow.x += 10
+            yellow.x += VELOCITY
         if keys_pressed[pygame.K_w]:
-            yellow.y -= 10
+            yellow.y -= VELOCITY
         if keys_pressed[pygame.K_s]:
-            yellow.y += 10
-            
+            yellow.y += VELOCITY
+
         draw_window(red, yellow)
 
     pygame.quit()
