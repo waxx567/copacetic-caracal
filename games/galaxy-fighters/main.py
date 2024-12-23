@@ -41,7 +41,7 @@ def red_handle_movement(keys_pressed, red):
         red.y += VELOCITY
 
 def yellow_handle_movement(keys_pressed, yellow):
-    if keys_pressed[pygame.K_a] and yellow.x - VELOCITY > BORDER.x + BORDER.width:
+    if keys_pressed[pygame.K_a] and yellow.x - VELOCITY > 0:
         yellow.x -= VELOCITY
     if keys_pressed[pygame.K_d] and yellow.x + VELOCITY + yellow.width < WIDTH:
         yellow.x += VELOCITY
