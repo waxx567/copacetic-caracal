@@ -16,6 +16,9 @@ BULLET_VELOCITY = 7
 MAX_BULLETS = 3
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
 
+YELLOW_HIT = pygame.USEREVENT + 1
+RED_HIT = pygame.USEREVENT + 2
+
 RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join("assets", "spaceship_red.png"))
 RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(
     RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 270)
@@ -51,6 +54,21 @@ def yellow_handle_movement(keys_pressed, yellow):
     if keys_pressed[pygame.K_s] and yellow.y + VELOCITY + yellow.height < HEIGHT - 15:
         yellow.y += VELOCITY
 
+def handle_bullets(red_bullets, yellow_bullets, red, yellow):
+    for bullet in red_bullets:
+        bullet.x += BULLET_VELOCITY
+        if yellow.colliderect(bullet):
+            red_bullets.remove(bullet)
+        elif bullet.x > WIDTH:
+            red_bullets.remove(bullet)
+
+    for bullet in yellow_bullets:
+        bullet.x -= BULLET_VELOCITY
+        if red.colliderect(bullet):
+            yellow_bullets.remove(bullet)
+        elif bullet.x < 0:
+            yellow_bullets.remove(bullet)
+
 def main():
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
@@ -79,6 +97,8 @@ def main():
         keys_pressed = pygame.key.get_pressed()
         red_handle_movement(keys_pressed, red)
         yellow_handle_movement(keys_pressed, yellow)
+
+        handle_bullets(red_bullets, yellow_bullets, red, yellow)
 
         draw_window(red, yellow)
 
