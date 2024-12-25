@@ -129,7 +129,6 @@ This project is open-source and available for modification and personal use.
 
 ## Acknowledgments
 
-- [Tech With Tim](https://www.youtube.com/@TechWithTim)
 - Background and spaceship assets from free online resources.
 - Built using the `pygame` library for game development.
 
