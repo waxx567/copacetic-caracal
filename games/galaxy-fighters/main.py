@@ -14,7 +14,6 @@ FPS = 60
 VELOCITY = 5
 BULLET_VELOCITY = 7
 MAX_BULLETS = 3
-
 SPACESHIP_WIDTH, SPACESHIP_HEIGHT = 55, 40
 
 RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join("assets", "spaceship_red.png"))
