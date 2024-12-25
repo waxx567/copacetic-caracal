@@ -1,4 +1,5 @@
 import pygame
+from .constants import RED, WHITE, SQUARE_SIZE
 
 class Piece(pygame.sprite.Sprite):
     def __init__(self, row, col, color):
@@ -8,4 +9,7 @@ class Piece(pygame.sprite.Sprite):
         self.color = color
         self.king = False
         
-        self.direction = 1
+        if self.color == RED:
+            self.direction = -1
+        else:
+            self.direction = 1
