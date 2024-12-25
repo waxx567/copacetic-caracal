@@ -18,6 +18,9 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                pass
+
     pygame.quit()
 
 
