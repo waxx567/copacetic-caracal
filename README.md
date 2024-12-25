@@ -14,4 +14,4 @@
 
 **Voice Recognition Bot**: `Python`
 
-**Web Scrapers**: `Python`
+**Web Scrapers**: `Python`, `BeautifulSoup`
