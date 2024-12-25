@@ -107,7 +107,7 @@ def main():
 
         handle_bullets(red_bullets, yellow_bullets, red, yellow)
 
-        draw_window(red, yellow)
+        draw_window(red, yellow, red_bullets, yellow_bullets)
 
     pygame.quit()
 
