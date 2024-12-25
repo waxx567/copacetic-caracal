@@ -3,8 +3,7 @@ import PyPDF2
 
 myFile = open('On-the-Origin-of-Species.pdf', 'rb')
 myReader = PyPDF2.PdfFileReader(myFile)
-page = myReader.getPage(0)
-text = page.extractText()
+numPages = len(myReader.pages)
 
 speaker = pyttsx3.init()
 
