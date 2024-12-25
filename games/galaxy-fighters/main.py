@@ -75,7 +75,7 @@ def main():
                     bullet = pygame.Rect(red.x, red.y + red.height//2 - 2, 10, 5)
                     red_bullets.append(bullet)
 
-        print(red_bullets, yellow_bullets)
+        # print(red_bullets, yellow_bullets)
         keys_pressed = pygame.key.get_pressed()
         red_handle_movement(keys_pressed, red)
         yellow_handle_movement(keys_pressed, yellow)
