@@ -13,7 +13,12 @@ def main():
 
     while run:
         clock.tick(FPS)
-        pass
+        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+    pygame.quit()
 
 
 if __name__ == '__main__':
