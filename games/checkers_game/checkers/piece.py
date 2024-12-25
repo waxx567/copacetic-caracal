@@ -6,3 +6,6 @@ class Piece(pygame.sprite.Sprite):
         self.row = row
         self.col = col
         self.color = color
+        self.king = False
+        
+        self.direction = 1
