@@ -7,6 +7,8 @@ pygame.display.set_caption("Galaxy Fighters")
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+YELLOW = (255, 255, 0)
 
 BORDER = pygame.Rect(WIDTH//2 - 5, 0, 10, HEIGHT)
 
@@ -32,6 +34,12 @@ def draw_window(red, yellow, red_bullets, yellow_bullets):
     pygame.draw.rect(WIN, BLACK, BORDER)
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
     WIN.blit(RED_SPACESHIP, (red.x, red.y))
+
+    for bullet in red_bullets:
+        pygame.draw.rect(WIN, RED, bullet)
+    for bullet in yellow_bullets:
+        pygame.draw.rect(WIN, YELLOW, bullet)
+
     pygame.display.update()
 
 def red_handle_movement(keys_pressed, red):
