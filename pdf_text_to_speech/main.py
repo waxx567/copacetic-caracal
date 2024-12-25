@@ -7,8 +7,9 @@ numPages = len(myReader.pages)
 # print("Number of pages in the PDF:", numPages)
 
 speaker = pyttsx3.init()
-print("Reading page 3...")
-page = myReader.pages[2]
-text = page.extract_text()
-speaker.say(text)
-speaker.runAndWait()
+for i in range(2, numPages):
+    page = myReader.pages[i]
+    text = page.extract_text()
+    speaker.say(text)
+    speaker.runAndWait()
+    
