@@ -103,13 +103,13 @@ You can tweak the following variables in the code:
 
 ### Adding Sounds
 
-Uncomment the lines for `BULLET_HIT_SOUND` and `BULLET_FIRE_SOUND` in the `main` function and ensure the corresponding sound files are in the `Assets` folder.
+Uncomment the lines for `BULLET_HIT_SOUND` and `BULLET_FIRE_SOUND` in the `main` function and ensure the corresponding sound files are in the `assets` folder.
 
 ---
 
 ## Known Issues
 
-Sound effects are commented out by default and require manual setup.
+Sound effects are commented out by default and require manual setup (see above).
 
 ---
 
