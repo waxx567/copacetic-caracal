@@ -1,3 +1,3 @@
 import pyttsx3
 
-engine = pyttsx3.init()
+speaker = pyttsx3.init()
