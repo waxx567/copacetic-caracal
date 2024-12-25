@@ -44,6 +44,17 @@ SPACE = pygame.transform.scale(pygame.image.load(
 
 
 def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_health):
+    """
+    Draws the game window with the given parameters.
+
+    Args:
+        red (pygame.Rect): The red spaceship.
+        yellow (pygame.Rect): The yellow spaceship.
+        red_bullets (list[pygame.Rect]): The list of bullets fired by the red spaceship.
+        yellow_bullets (list[pygame.Rect]): The list of bullets fired by the yellow spaceship.
+        red_health (int): The current health of the red spaceship.
+        yellow_health (int): The current health of the yellow spaceship.
+    """
     WIN.blit(SPACE, (0, 0))
     pygame.draw.rect(WIN, BLACK, BORDER)
 
@@ -67,6 +78,14 @@ def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_hea
 
 
 def yellow_handle_movement(keys_pressed, yellow):
+    """
+    Handles the movement of the yellow spaceship based on key presses.
+
+    Args:
+        keys_pressed (list[bool]): List indicating the state of each key.
+        yellow (pygame.Rect): The rectangle representing the yellow spaceship.
+    """
+
     if keys_pressed[pygame.K_a] and yellow.x - VEL > 0:  # LEFT
         yellow.x -= VEL
     if keys_pressed[pygame.K_d] and yellow.x + VEL + yellow.width < BORDER.x:  # RIGHT
@@ -78,6 +97,14 @@ def yellow_handle_movement(keys_pressed, yellow):
 
 
 def red_handle_movement(keys_pressed, red):
+    """
+    Handles the movement of the red spaceship based on key presses.
+
+    Args:
+        keys_pressed (list[bool]): List indicating the state of each key.
+        red (pygame.Rect): The rectangle representing the red spaceship.
+    """
+
     if keys_pressed[pygame.K_LEFT] and red.x - VEL > BORDER.x + BORDER.width:  # LEFT
         red.x -= VEL
     if keys_pressed[pygame.K_RIGHT] and red.x + VEL + red.width < WIDTH:  # RIGHT
@@ -89,6 +116,15 @@ def red_handle_movement(keys_pressed, red):
 
 
 def handle_bullets(yellow_bullets, red_bullets, yellow, red):
+    """
+    Handles the movement of all bullets on the screen and checks for collisions with either spaceship.
+
+    Args:
+        yellow_bullets (list[pygame.Rect]): List of bullets fired by the yellow spaceship.
+        red_bullets (list[pygame.Rect]): List of bullets fired by the red spaceship.
+        yellow (pygame.Rect): The rectangle representing the yellow spaceship.
+        red (pygame.Rect): The rectangle representing the red spaceship.
+    """
     for bullet in yellow_bullets:
         bullet.x += BULLET_VEL
         if red.colliderect(bullet):
@@ -107,6 +143,13 @@ def handle_bullets(yellow_bullets, red_bullets, yellow, red):
 
 
 def draw_winner(text):
+    """
+    Displays the winning text message at the center of the screen.
+
+    Args:
+        text (str): The text to be displayed as the winner message.
+    """
+
     draw_text = WINNER_FONT.render(text, 1, WHITE)
     WIN.blit(draw_text, (WIDTH/2 - draw_text.get_width() /
                          2, HEIGHT/2 - draw_text.get_height()/2))
@@ -115,6 +158,20 @@ def draw_winner(text):
 
 
 def main():
+    """
+    Main entry point of the game. Creates the game window, initializes the 
+    game objects, and starts the game loop.
+
+    The game loop checks for the QUIT event to stop the game, and handles 
+    KEYDOWN events to fire bullets and move the spaceships. It also checks 
+    for collisions between bullets and the opponent's spaceship, and updates 
+    the game state accordingly.
+
+    The game loop also draws the game window and all the game objects.
+
+    The game continues until either spaceship's health reaches 0. The winner is 
+    then displayed in the game window.
+    """
     red = pygame.Rect(700, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
     yellow = pygame.Rect(100, 300, SPACESHIP_WIDTH, SPACESHIP_HEIGHT)
 
