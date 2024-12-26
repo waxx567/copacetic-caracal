@@ -2,7 +2,7 @@ import pygame
 from .constants import RED, GREY, SQUARE_SIZE
 
 class Piece:
-    PADDING = 6
+    PADDING = 10
     OUTLINE = 2
 
     def __init__(self, row, col, color):
