@@ -2,8 +2,9 @@ import pygame
 from .constants import RED, WHITE, SQUARE_SIZE
 
 class Piece:
-    PADDING = 5
-    
+    PADDING = 6
+    BORDER = 2
+
     def __init__(self, row, col, color):
         super().__init__()
         self.row = row
