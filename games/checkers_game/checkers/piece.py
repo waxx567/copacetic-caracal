@@ -1,7 +1,9 @@
 import pygame
 from .constants import RED, WHITE, SQUARE_SIZE
 
-class Piece(pygame.sprite.Sprite):
+class Piece:
+    PADDING = 5
+    
     def __init__(self, row, col, color):
         super().__init__()
         self.row = row
@@ -21,3 +23,9 @@ class Piece(pygame.sprite.Sprite):
     def calc_pos(self):
         self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
         self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
+
+    def make_king(self):
+        self.king = True
+
+    def draw(self, win):
+        pygame.draw.circle(win, self.color, (self.x, self.y), SQUARE_SIZE // 2 - 10)
