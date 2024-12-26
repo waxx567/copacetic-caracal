@@ -10,7 +10,7 @@ class Piece:
         self.row = row
         self.col = col
         self.color = color
-        self.king = True
+        self.king = False
         
         if self.color == RED:
             self.direction = -1
