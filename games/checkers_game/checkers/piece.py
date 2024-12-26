@@ -16,6 +16,7 @@ class Piece(pygame.sprite.Sprite):
 
         self.x = 0
         self.y = 0
+        self.calc_pos()
 
     def calc_pos(self):
         self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2
