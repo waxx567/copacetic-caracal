@@ -1,5 +1,6 @@
 import pygame
 from .constants import RED, WHITE, BLACK, SQUARE_SIZE, ROWS, COLS
+from .piece import Piece
 
 class Board:
     def __init__(self):
