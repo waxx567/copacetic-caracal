@@ -35,4 +35,10 @@ Run server again to check there are no issues
 OK FOR DEVELOPMENT ENVIRONMENT BUT NOT RECOMMENDED FOR PRODUCTION
 
 `settings.py`
-FOR PRODUCTION `SECRET KEY` MUST BE KEPT SECRET AND `DEBUG` MUST BE SET TO FALSE
+FOR PRODUCTION `SECRET KEY` MUST BE KEPT SECRET
+
+`settings.py`
+FOR PRODUCTION `DEBUG` MUST BE SET TO FALSE
+
+`settings.py`
+`ALLOWED HOSTS` is a list of hosts that this project is permitted to be hosted on eg. `ALLOWED HOSTS = ['mydomain.com']` no need for http or https
