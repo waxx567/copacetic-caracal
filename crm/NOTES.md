@@ -53,7 +53,7 @@ Add `'leads'` to INSTALLED APPS list in `djcrm/settings.py`
 
 ## Creating a class
 
-When creating a class in Django (in `models.py`), you need to run
+When creating a class in Django (in `leads/models.py`), you need to run
 `python manage.py makemigrations`
 to create a list of operations to apply to the database when creating models.
 This `Migration` class (stored in `leads/migrations/0001_initial.py`, for example) is a representation of what we want to happen to the database whenever we create a schema.
