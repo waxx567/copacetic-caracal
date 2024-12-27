@@ -2,7 +2,7 @@
 
 CRM build using:
 
-- Django 3.1
+- Django 3.1.4
 - Tailwind
 - Python 3.12
 
