@@ -48,3 +48,5 @@ FOR PRODUCTION `DEBUG` MUST BE SET TO FALSE
 
 Create leads app
 `python manage.py startapp leads`
+
+Add `'leads'` to INSTALLED APPS list in `djcrm/settings.py`
