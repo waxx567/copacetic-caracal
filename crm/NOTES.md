@@ -45,3 +45,6 @@ FOR PRODUCTION `DEBUG` MUST BE SET TO FALSE
 
 `settings.py`
 `TEMPLATES 'DIRS': []` is a list of directories. Our own folders or template we want use need to be specified here so that Django is aware of them.
+
+Create leads app
+`python manage.py startapp leads`
