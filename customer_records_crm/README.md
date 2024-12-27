@@ -1,7 +1,8 @@
-# CRM Customer Records Application
+# SaaS Application
 
 ## Tech Stack
 
 Python
 Django
-PostgreSQL
+Neon PostgreSQL
+Flowbite TailwindCSS
