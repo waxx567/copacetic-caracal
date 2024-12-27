@@ -1,4 +1,5 @@
 import pathlib
+from django.shortcuts import render
 from django.http import HttpResponse
 
 this_dir = pathlib.Path(__file__).resolve().parent
