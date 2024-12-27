@@ -27,3 +27,6 @@ Run server
 
 Apply unapplied migrations
 `python manage.py migrate`
+
+Run server again to check no issues
+`python manage.py runserver`
