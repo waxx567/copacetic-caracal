@@ -9,8 +9,8 @@ def home_page_view(request, *args, **kwargs):
     my_context = {
         'page_title': my_title
     }
-    html_ = ''
-    return HttpResponse(html_)
+    html_template = 'home.html'
+    return render(request, html_template)
 
 
 def my_old_home_page_view(request, *args, **kwargs):
