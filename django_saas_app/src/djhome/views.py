@@ -8,6 +8,15 @@ def home_page_view(request, *args, **kwargs):
     my_context = {
         'page_title': my_title
     }
+    html_ = ''
+    return HttpResponse(html_)
+
+
+def my_old_home_page_view(request, *args, **kwargs):
+    my_title = 'My Home Page'
+    my_context = {
+        'page_title': my_title
+    }
     html_ = '''
 <!DOCTYPE html>
 <html>
