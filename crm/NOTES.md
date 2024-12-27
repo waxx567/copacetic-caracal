@@ -1,4 +1,4 @@
-# Django notes
+# My developer notes
 
 Django is a free and open source Python web framework.
 
