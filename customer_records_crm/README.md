@@ -4,4 +4,4 @@
 
 Python
 Django
-MySQL
+PostgreSQL
