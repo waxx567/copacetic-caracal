@@ -50,3 +50,8 @@ Create leads app
 `python manage.py startapp leads`
 
 Add `'leads'` to INSTALLED APPS list in `djcrm/settings.py`
+
+
+When creating a class in Django (in `models.py`), you need to run
+`python manage.py makemigrations` to create the schema in the database and
+`
