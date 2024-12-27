@@ -30,3 +30,6 @@ Apply unapplied migrations
 
 Run server again to check there are no issues
 `python manage.py runserver`
+
+`settings.py`
+FOR PRODUCTION `SECRET KEY` MUST BE KEPT SECRET AND `DEBUG` MUST BE SET TO FALSE
