@@ -15,7 +15,7 @@ def home_page_view(request, *args, **kwargs):
     <h1>Welcome to {page_title}</h1>
 </body>
 </html>
-'''.format(page_title=my_title)
+'''.format(**my_context)
     # html_file_path = this_dir / 'home.html'
     # html_ = html_file_path.read_text()
     return HttpResponse(html_)
