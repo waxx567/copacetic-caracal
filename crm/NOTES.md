@@ -1,5 +1,7 @@
 # My developer notes
 
+## 2024/12/27
+
 Django is a free and open source Python web framework.
 
 Encourages rapid development.
@@ -51,7 +53,7 @@ Create leads app
 
 Add `'leads'` to INSTALLED APPS list in `djcrm/settings.py`
 
-## Creating a class
+### Creating a class
 
 When creating a class in Django (in `leads/models.py`), you need to run
 `python manage.py makemigrations`
