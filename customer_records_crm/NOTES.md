@@ -70,3 +70,5 @@ It would be preferable to have a customer records app that can add leads later.
 Also better to use MySQL for production.
 
 Let's plan things better beforehand this time.
+
+My investigations lead me to believe PostgreSQL is favored by most players in the industry.
