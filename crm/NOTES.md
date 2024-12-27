@@ -4,6 +4,6 @@ CRM build using:
 
 - Django
 - Tailwind
-- deploy to Hostinger
+- Python 3.12
 
 The CRM captures leads, stores them, and assigns them to sales agents.
