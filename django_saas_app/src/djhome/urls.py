@@ -20,6 +20,7 @@ from django.urls import path
 from .views import home_page_view
 
 urlpatterns = [
+    path('', home_page_view), # index page -> root URL
     path('hello-django/', home_page_view),
     path('admin/', admin.site.urls),
 ]
