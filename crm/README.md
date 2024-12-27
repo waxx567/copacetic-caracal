@@ -1,10 +1,11 @@
-# CRM
+# CRM Lead Application
 
-The CRM captures leads, stores them, and assigns them to sales agents.
-Tracks a lead throughout its entire life-cycle.
+The application creates a lead and manages it throughout its entire life-cycle.
 
-CRM build using:
+Captures leads, stores them, and assigns them to sales agents.
+
+CRM built using:
 
 - Django 3.1.4
-- Tailwind
 - Python 3.12
+- TailwindCSS
