@@ -4,15 +4,12 @@ from django.http import HttpResponse
 this_dir = pathlib.Path(__file__).resolve().parent
 
 def home_page_view(request, *args, **kwargs):
-    print(this_dir)
-    html_ = '''
+    my_title = 'My Home Page'
+    html_ = f'''
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Home</title>
-</head>
 <body>
-    <h1>Welcome to the Home Page</h1>
+    <h1>Welcome to {my_title}</h1>
 </body>
 </html>
 '''
