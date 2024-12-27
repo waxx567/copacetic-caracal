@@ -42,3 +42,6 @@ FOR PRODUCTION `DEBUG` MUST BE SET TO FALSE
 
 `settings.py`
 `ALLOWED HOSTS` is a list of hosts that this project is permitted to be hosted on eg. `ALLOWED HOSTS = ['mydomain.com']` no need for http or https
+
+`settings.py`
+`TEMPLATES 'DIRS': []` is a list of directories. Our own folders or template we want use need to be specified here so that Django is aware of them.
