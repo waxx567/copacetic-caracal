@@ -66,3 +66,5 @@ Now the database has been updated.
 It would be preferable to have a customer records app that can add leads later.
 
 Also better to use MySQL for production.
+
+Let's plan things better beforehand this time.
