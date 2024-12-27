@@ -62,3 +62,7 @@ Then run
 `python manage.py migrate`
 which causes Django to look through inside the migrations folders of all of our apps and run through all of the migration files inside those apps, applying all those which haven't been applied yet.
 Now the database has been updated.
+
+It would be preferable to have a customer records app that can add leads later.
+
+Also better to use MySQL for production.
