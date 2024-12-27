@@ -55,3 +55,7 @@ Add `'leads'` to INSTALLED APPS list in `djcrm/settings.py`
 When creating a class in Django (in `models.py`), you need to run
 `python manage.py makemigrations`
 to create a list of operations to apply to the database when creating models. This `Migration` class (stored in `0001_initial.py`) is a representation of what we want to happen to the database whenever we create a schema. This is a blueprint. The database `db.sqlite3` has not been altered yet.
+then run
+`python manage.py migrate`
+which causes Django to look through inside the migrations folders of all of our apps and run through all of the migration files inside those apps, applying all those which haven't been applied yet.
+Now the database has been updated.
