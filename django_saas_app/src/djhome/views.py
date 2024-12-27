@@ -12,7 +12,7 @@ def home_page_view(request, *args, **kwargs):
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome to the Django Home Page</h1>
+    <h1>Welcome to the Home Page</h1>
 </body>
 </html>
 '''
