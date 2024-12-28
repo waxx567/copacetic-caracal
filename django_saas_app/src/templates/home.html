@@ -5,3 +5,5 @@
 {% block content %}
 <p>Welcome to the home page!</p>
 {% endblock %}
+
+<p>{{ request.user }} {{ request.method }} {{ request.user.is_authenticated }}</p>
