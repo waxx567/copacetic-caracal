@@ -12,6 +12,7 @@ def home_page_view(request, *args, **kwargs):
         'page_title': my_title
     }
     html_template = 'home.html'
+    PageVisit.objects.create()
     return render(request, html_template, my_context)
 
 
