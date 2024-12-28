@@ -10,7 +10,8 @@ def home_page_view(request, *args, **kwargs):
     query_set = PageVisit.objects.all()
     my_title = 'My Home Page'
     my_context = {
-        'page_title': my_title
+        'page_title': my_title,
+        'query_set': query_set
     }
     html_template = 'home.html'
     PageVisit.objects.create()
