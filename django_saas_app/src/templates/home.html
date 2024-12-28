@@ -6,6 +6,6 @@
 
 <p>Welcome to the home page!</p>
 
-<p>{{ request.user }} {{ request.method }} {{ request.user.is_authenticated }}</p>
+{% include 'snippets/welcome-user-msg.html' %}
 
 {% endblock %}
