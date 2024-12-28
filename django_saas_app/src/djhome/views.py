@@ -9,7 +9,7 @@ def home_page_view(request, *args, **kwargs):
     my_context = {
         'page_title': my_title
     }
-    html_template = 'home.html'
+    html_template = 'base.html'
     return render(request, html_template, my_context)
 
 
