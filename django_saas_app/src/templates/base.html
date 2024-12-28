@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>SaaS</title> 
+    <title>{% block head_title %}SaaS{% endblock %}</title> 
 
 </head>
 <body>
@@ -10,6 +10,6 @@
     <h1>{{ page_title }}</h1>
 
     {% block content %}{% endblock %}
-    
+
 </body>
 </html>
