@@ -7,6 +7,7 @@ from visits.models import PageVisit
 this_dir = pathlib.Path(__file__).resolve().parent
 
 def home_page_view(request, *args, **kwargs):
+    query_set = PageVisit.objects.all()
     my_title = 'My Home Page'
     my_context = {
         'page_title': my_title
