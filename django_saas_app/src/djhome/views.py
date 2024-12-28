@@ -13,6 +13,7 @@ def home_page_view(request, *args, **kwargs):
     my_context = {
         'page_title': my_title,
         'page_visit_count': page_qs.count(),
+        'percent': (page_qs.count() / qs.count()) * 100,
         'total_visit_count': qs.count()
     }
     path = request.path
