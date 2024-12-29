@@ -72,3 +72,13 @@ Also better to use MySQL for production.
 Let's plan things better beforehand this time.
 
 My investigations lead me to believe PostgreSQL is favored by most players in the industry.
+
+## 2024/12/29 (1:18:58)
+
+### Prepare for Production Environment
+
+I am going to try to deploy to production. I am doing this because I think it is important to be able to do this quickly and easily if I'm going to be maintaining applications regularly.
+
+I know the app is not production ready, and I will not be changing the `SECRET KEY` and `Debug=True` in `settings.py` yet. I'm keeping them on because I'm testing my production environment, not pushing into production for other people to use.
+
+I'll be using Docker containers.
