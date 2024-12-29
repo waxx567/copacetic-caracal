@@ -21,8 +21,8 @@ from .views import home_view
 
 urlpatterns = [
     path('', home_view), # index page -> root URL
+    path('hello/', home_view),
     path('about/', home_view),
-    path('home/', home_view),
     path('hello-django/', home_view),
     path('admin/', admin.site.urls),
 ]
