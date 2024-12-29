@@ -84,3 +84,4 @@ I know the app is not production ready, and I will not be changing the `SECRET K
 `1:25:30`
 Deploy Django to Railway with Docker Containers
 Created a branch `Base-code` with the code as it stands.
+[Reference Blog Post](https://www.codingforentrepreneurs.com/blog/deploy-django-on-railway-with-this-dockerfile)
