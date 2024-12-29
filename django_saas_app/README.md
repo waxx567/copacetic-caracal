@@ -4,6 +4,7 @@
 
 Python
 Django
+Docker
+Railway
 Neon PostgreSQL
 Flowbite TailwindCSS
-Docker
