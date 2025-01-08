@@ -10,6 +10,8 @@
 
 **PDF Text to Speech**: `Python`, `pyttsx3`, `PyPDF2`
 
+**Social network** (in the future)
+
 **CLI Student Record Handler**: `Python`
 
 **Voice Recognition Bot**: `Python`
