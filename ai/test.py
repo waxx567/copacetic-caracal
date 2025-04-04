@@ -159,3 +159,14 @@ auth_system.login("neena", "password123")
 
 
 auth_system.login("helios", "mysecurepassword")
+
+'''
+Your job is to determine if this is a high-quality, correct response to the prompt!
+
+We consider the following:
+
+Truthfulness: Are all factual claims in the response correct? Does the code work, and is it well-written?
+Examples of claims: "Python is an object-oriented language.", "O(n) is the runtime of this code"
+Instruction following: Are all the prompt's instructions followed? Does the provided response meet all specifications?
+These determine the overall quality of the response.
+'''
