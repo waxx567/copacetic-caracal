@@ -171,3 +171,9 @@ Examples of claims: "Python is an object-oriented language.", "O(n) is the runti
 Instruction following: Are all the prompt's instructions followed? Does the provided response meet all specifications?
 These determine the overall quality of the response.
 '''
+'''
+How would you change the given response to make it helpful? Be detailed and call out all issues in the response, including the code! If there are no issues, write N/A.
+'''
+'''
+I would add `ATTEMPTS = 3` and `ATTEMPTS_LEFT = ATTEMPTS -1` as constants. Change `if self.failed_attempts >= 3:` to `if self.failed_attempts >= ATTEMPTS_LEFT:` and `"failed_attempts_left": [3],` to `"failed_attempts_left": [ATTEMPTS_LEFT],`.
+'''
