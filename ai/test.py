@@ -8,7 +8,8 @@ Give them the passwords "password123" and "mysecurepassword" respectively. Do 4 
 
 import pandas as pd
 
-
+ATTEMPTS = 3
+ATTEMPTS_LEFT = ATTEMPTS - 1
 
 class User:
 
@@ -40,7 +41,7 @@ class User:
 
         print(f"Failed attempts for {self.username}: {self.failed_attempts}")
 
-        if self.failed_attempts >= 3:
+        if self.failed_attempts >= ATTEMPTS_LEFT:
 
             self.lock_account()
 
@@ -74,7 +75,7 @@ class AuthenticationSystem:
 
             "password": [password], 
 
-            "failed_attempts_left": [3], 
+            "failed_attempts_left": [ATTEMPTS_LEFT], 
 
             "is_locked": [False]
 
