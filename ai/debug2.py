@@ -13,4 +13,8 @@ def get_readings_in_range(node, start_time, end_time):
     if node is None:
         return readings
     
-    if start_time <= 
+    if start_time <= node.timestamp <= end_time:
+        readings.append((node.timestamp, node.reading))
+
+    if start_time < node.timestamp:
+        readings.append(get_readings_in_range(node.left, start_time, end_time))
