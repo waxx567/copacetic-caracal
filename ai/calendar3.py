@@ -30,3 +30,9 @@ class Calendar:
         return False
     
     def delete_event(self, name):
+        # Delete appointment by name
+        initial_count = len(self.appointments)
+        self.appointments = [appt for appt in self.appointments if appt[3] != name]
+        if len(self.appointments) == initial_count:
+            return f"Event '{name}' not found."
+        return f"Event '{name}' deleted successfully."
