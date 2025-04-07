@@ -13,5 +13,20 @@ class Calendar:
         # Check for free timeslot
         for appt_date, start, end, _ in self.appointments:
             if appt_date == date and not (time_end <= start or time_start >= end):
-                return False
+                return False # Time conflict found
         return True
+    
+    def is_busy(self, date, start, end):
+        # Check for busy timeslot
+        return not self.is_free(date, start, end)
+    
+    def schedule_time(self, date, start, end, name):
+        # Schedule appointment if free
+        if self.is_free(date, start, end):
+            self.appointments.append((date, start, end, name))
+            # Sort appointments by date and start time
+            self.appointments.sort(key=lambda appt: (appt[0], appt[1]))
+            return True
+        return False
+    
+    def delete_event(self, name):
