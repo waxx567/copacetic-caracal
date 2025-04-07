@@ -6,3 +6,8 @@ def calculate_occurrences(items):
     for item in items:
         if item in occurences:
             occurences[item] += 1
+        else:
+            occurences[item] = 1
+    return occurences
+
+items = ['apple', 'banana', 'orange', 'apple', 'banana', 'apple']
