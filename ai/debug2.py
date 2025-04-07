@@ -7,3 +7,8 @@ class SensorDataNode:
         self.reading = reading
         self.left = None
         self.right = None
+
+def get_readings_in_range(node, start_time, end_time):
+    readings = []
+    if node is None:
+        return readings
