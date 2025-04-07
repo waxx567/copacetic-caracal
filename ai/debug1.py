@@ -3,3 +3,4 @@ Your colleague has written a simple statistical analysis function in Python to c
 '''
 def calculate_occurrences(items):
     occurences = {}
+    for item in items:
