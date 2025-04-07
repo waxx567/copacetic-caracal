@@ -5,3 +5,4 @@ def calculate_occurrences(items):
     occurences = {}
     for item in items:
         if item in occurences:
+            occurences[item] += 1
